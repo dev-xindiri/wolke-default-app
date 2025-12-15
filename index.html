@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wolke App Running</title>
+    <style>
+      body {
+        font-family:
+          "SF Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        background-color: #e9ecef;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: #495057;
+      }
+
+      .container {
+        max-width: 600px;
+        text-align: left;
+        padding: 20px;
+      }
+
+      .main-heading {
+        font-size: 2.2em;
+        font-weight: 600;
+        color: #343a40;
+        margin-bottom: 0.5em;
+      }
+
+      .description {
+        font-size: 1em;
+        font-weight: 400;
+        color: #6c757d;
+        margin-bottom: 2em;
+        line-height: 1.5;
+      }
+
+      .status {
+        font-size: 0.9em;
+        color: #495057;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        display: flex;
+        align-items: center;
+      }
+
+      .status::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #007bff;
+        border-radius: 50%;
+        margin-right: 8px;
+        animation: pulse 1.5s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+        }
+
+        70% {
+          box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+        }
+
+        100% {
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+        }
+      }
+
+      .dashboard-link {
+        font-size: 0.9em;
+        color: #007bff;
+        text-decoration: none;
+        display: block;
+        margin-top: 10px;
+      }
+
+      .dashboard-link:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="main-heading">Your wolke app is running</h1>
+
+      <p class="description">
+        This is the default placeholder page. Deploy your application code to
+        replace this screen.
+      </p>
+
+      <div class="status">Awaiting deployment</div>
+
+      <a href="https://wolke.host/apps/projects" class="dashboard-link">
+        Deploy from your dashboard &rarr;
+      </a>
+    </div>
+  </body>
+</html>
